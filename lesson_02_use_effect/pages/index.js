@@ -1,26 +1,32 @@
 import { useState } from "react";
+import { useEffect } from "react";
+import React from "react";
+import Cards from "@/components/Cards";
 
-const [count, setCount] = useState("100");
-const add = () => {
-  count = count + 1;
-  console.log("add", count);
-};
-const [sub, setSub] = useState();
-export default function Home() {
+function Home() {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const res = await fetch("https://dev.to/api/articles?per_page=9");
+    const data = await res.json();
+    setBlogs(data);
+    console.log("Data", data);
+  };
   return (
-    <div className="text-3xl flex justify-center flex-col">
-      Welcome
-      <div className="flex justify-center">
-        COUNT: <span className="text-orange-700">{count} </span>
-      </div>
-      <div className=" flex justify-center ">
-        <div className="flex justify-center border" onClick={add}>
-          Nemeh
+    <main className={`container mx-auto`}>
+      <section>
+        <h2>@All blogs</h2>
+        <div className="grid grid-cols-3 gap3">
+          {blogs.map((blog, i) => (
+            <Cards blog={blog} />
+          ))}
         </div>
-        <div className="flex justify-center border" onClick={sub}>
-          Hasah
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
+export default Home;
