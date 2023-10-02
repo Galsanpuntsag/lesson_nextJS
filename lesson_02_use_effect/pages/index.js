@@ -19,17 +19,19 @@ function Home() {
   };
 
   return (
-    <main className={`container mx-auto`}>
+    <div className="">
       <Header />
-      <section>
-        <h2>@All blogs</h2>
-        <div className="grid grid-cols-3 gap3 mx-auto">
-          {blogs.map((blog, i) => (
-            <Cards blog={blog} />
-          ))}
-        </div>
-      </section>
-    </main>
+      <main className={`container mx-auto`}>
+        <section>
+          <h2>@All blogs</h2>
+          <div className="grid grid-cols-3 gap3 mb-[20px] p-4">
+            {blogs.map((blog, i) => (
+              <Cards blog={blog} />
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
 export default Home;

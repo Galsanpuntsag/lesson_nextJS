@@ -11,7 +11,7 @@ function Header() {
   }, []);
 
   const fetchData = async () => {
-    const res = await fetch("https://dev.to/api/articles/latest?per_page=3");
+    const res = await fetch("https://dev.to/api/articles/latest?per_page=4");
     const data = await res.json();
     setBlogs(data);
     console.log("Data", data);
