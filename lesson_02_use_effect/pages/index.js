@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import React from "react";
 import Cards from "@/components/Cards";
+import Header from "@/components/Header";
 
 function Home() {
   const [blogs, setBlogs] = useState([]);
@@ -16,11 +17,13 @@ function Home() {
     setBlogs(data);
     console.log("Data", data);
   };
+
   return (
     <main className={`container mx-auto`}>
+      <Header />
       <section>
         <h2>@All blogs</h2>
-        <div className="grid grid-cols-3 gap3">
+        <div className="grid grid-cols-3 gap3 mx-auto">
           {blogs.map((blog, i) => (
             <Cards blog={blog} />
           ))}
