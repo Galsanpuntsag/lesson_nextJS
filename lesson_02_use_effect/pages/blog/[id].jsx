@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { formatData } from "@/utils/functions";
+import moment from "moment";
 
 const BlogDetail = () => {
   const router = useRouter();
   const { id } = router.query;
+  console.log("Router", id);
 
   const [blogDetailData, setDetailData] = useState();
-
-  console.log("Router", id);
 
   const getBlogDetail = async () => {
     const res = await fetch(`https://dev.to/api/articles/${id}`);
@@ -42,7 +42,7 @@ const BlogDetail = () => {
                   </h4>
                 </div>
                 <p className="text-lg text-gray-500">
-                  {formatData(blogDetailData.created_at)}
+                  {moment(blogDetailData.created_at).format("LL")}
                 </p>
               </div>
             </div>

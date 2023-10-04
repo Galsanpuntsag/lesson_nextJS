@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 
 function Home() {
   const [blogs, setBlogs] = useState([]);
-
+  console.log("BLOGS", blogs);
   useEffect(() => {
     fetchData();
   }, []);
@@ -15,7 +15,6 @@ function Home() {
     const res = await fetch("https://dev.to/api/articles?per_page=9");
     const data = await res.json();
     setBlogs(data);
-    console.log("Data", data);
   };
 
   return (
@@ -24,10 +23,17 @@ function Home() {
       <main className={`container mx-auto`}>
         <section>
           <h2>@All blogs</h2>
-          <div className="grid grid-cols-3 gap3 mb-[20px] p-4">
-            {blogs.map((blog, i) => (
-              <Cards blog={blog} />
-            ))}
+          <div className="">
+            <div className="grid grid-cols-3 gap-3 mx-auto">
+              {blogs.map((blog, i) => (
+                <Cards blog={blog} />
+              ))}
+            </div>
+            <div className="flex justify-center">
+              <button className="border bg-slate-100 rounded-[20px] mt-8 p-4 font-bold text-[20px] mx-auto">
+                Loud More
+              </button>
+            </div>
           </div>
         </section>
       </main>

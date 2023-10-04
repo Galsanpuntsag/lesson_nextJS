@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { useEffect } from "react";
+import { useState } from "react";
 import React from "react";
 import Headercards from "../Headercards";
 
 function Header() {
-  const [blogs, setBlogs] = useState([]);
+  const [headblogs, setHeadblogs] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -13,14 +13,14 @@ function Header() {
   const fetchData = async () => {
     const res = await fetch("https://dev.to/api/articles/latest?per_page=4");
     const data = await res.json();
-    setBlogs(data);
-    console.log("Data", data);
+    setHeadblogs(data);
+    console.log("headerDataBlogs", data);
   };
   return (
     <main className={`container mx-auto`}>
-      <section>
+      <section className="mt-[100px]">
         <h10>Reacent blog posts</h10>
-        <div className="">{blogs && <Headercards blogs={blogs} />}</div>
+        <Headercards headblogs={headblogs} />
       </section>
     </main>
   );
