@@ -1,31 +1,23 @@
 import React from "react";
 import moment from "moment";
+import RecentCard from "../RecentCard";
 
 const Headercards = ({ headblogs }) => {
   return (
     <div className="">
-      <div className="bg-[grey] w-[1236px] h-[432px] ">
-        <div className="flex w-[1236px] h-[432px] bg-[brown] mt-8">
-          <div className="w-[592px] h-[432px] bg-[yellow] ">
-            <img
-              src={
-                headblogs?.profile_image ? headblogs?.profile_image : "/ai.jpg"
-              }
-              className="w-[592px] h-[272px] mb-[32px]"
-            ></img>
-            <h20 className="text-black">
-              {moment(headblogs?.created_at).format("LL")}
-            </h20>
-            <h21> {headblogs?.user?.name}</h21>
-          </div>
-          <div className="ml-8">
-            <div className="w-[592px] h-[200px] bg-[blue]">02</div>
-            <div className="w-[592px] h-[200px] bg-[red] mt-8">03</div>
+      <div className="bg-slate-200 pt-5 w-11/12 rounded-[20px]">
+        <h10 className="pl-5">Reacent blog posts</h10>
+        <div className="flex mt-8 pl-5">
+          <RecentCard headblog={headblogs[0]} type="flex-col" />
+
+          <div className="ml-8 flex-1 pr-5">
+            <RecentCard headblog={headblogs[1]} type="row" />
+            <RecentCard headblog={headblogs[2]} type="row" />
           </div>
         </div>
       </div>
-      <div className="w-[1236px] h-[246px] mt-[100px] bg-[purple] mb-[100px]">
-        04
+      <div className="w-11/12 h-[246px] mt-[50px] bg-slate-200 rounded-[20px] mb-[100px]">
+        <RecentCard headblog={headblogs[3]} type="row h-[246px] gap-10 p-5" />
       </div>
     </div>
   );

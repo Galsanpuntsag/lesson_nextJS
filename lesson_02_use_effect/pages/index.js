@@ -24,7 +24,7 @@ function Home() {
         <section>
           <h2>@All blogs</h2>
           <div className="">
-            <div className="grid grid-cols-3 gap-3 mx-auto">
+            <div className="grid grid-cols-3 gap-3 my-10">
               {blogs.map((blog, i) => (
                 <Cards blog={blog} />
               ))}

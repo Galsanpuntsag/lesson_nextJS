@@ -18,8 +18,7 @@ function Header() {
   };
   return (
     <main className={`container mx-auto`}>
-      <section className="mt-[100px]">
-        <h10>Reacent blog posts</h10>
+      <section className="mt-[80px]">
         <Headercards headblogs={headblogs} />
       </section>
     </main>
