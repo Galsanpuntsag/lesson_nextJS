@@ -17,7 +17,10 @@ const Headercards = ({ headblogs }) => {
         </div>
       </div>
       <div className="w-11/12 h-[246px] mt-[50px] bg-slate-200 rounded-[20px] mb-[100px]">
-        <RecentCard headblog={headblogs[3]} type="row h-[246px] gap-10 p-5" />
+        <RecentCard
+          headblog={headblogs[3]}
+          type="row h-[246px] gap-10 p-5npm"
+        />
       </div>
     </div>
   );
