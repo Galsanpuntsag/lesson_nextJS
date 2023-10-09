@@ -19,7 +19,7 @@ function Header() {
   return (
     <main className={`container mx-auto`}>
       <section className="mt-[80px]">
-        <Headercards headblogs={headblogs} />
+        {headblogs && <Headercards headblogs={headblogs} />}
       </section>
     </main>
   );

@@ -34,11 +34,11 @@ const BlogDetail = () => {
                 <div className="flex items-center">
                   <img
                     className="w-8 h-8 rounded-full"
-                    src={blogDetailData.user.profile_image}
+                    src={blogDetailData?.user?.profile_image}
                     alt="avatar"
                   />
                   <h4 className="ml-2 text-lg text-gray-500">
-                    {blogDetailData.user.name}
+                    {blogDetailData?.user?.name}
                   </h4>
                 </div>
                 <p className="text-lg text-gray-500">

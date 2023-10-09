@@ -35,11 +35,17 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <input
-          type="text"
-          placeholder="Search"
-          className="p-4 w-[134px] h-[20px] bg-[#F4F4F5] border-[1px] rounded-[10px] border-black"
-        ></input>
+        <div className="">
+          <input
+            type="text"
+            placeholder="Search"
+            className="p-4 w-[134px] h-[20px] bg-[#F4F4F5] border-[1px] rounded-[10px] border-black"
+          ></input>
+          <button>
+            {" "}
+            <img src=""></img>
+          </button>
+        </div>
         <div className="">
           <img src="SearchIcon.png"></img>
         </div>
