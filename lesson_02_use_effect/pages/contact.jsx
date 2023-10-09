@@ -43,12 +43,14 @@ const contact = () => {
               placeholder="Subject"
               className="w-[478px] h-[35px] rounded-2xl pl-4"
             ></input>
-            <input
-              type="text"
-              placeholder="Write a message"
-              className="w-[478px] h-[135px] rounded-2xl pl-4"
-            ></input>
-            <button className="w-[180px] h-[30px] bg-[cyan] rounded-xl">
+            <div className="flex items-start">
+              <input
+                type="text"
+                placeholder="Write a message"
+                className="w-[478px] h-[135px] rounded-2xl pb-[100px] pl-4"
+              ></input>
+            </div>
+            <button className="w-[180px] h-[30px] bg-blue-300 hover:bg-sky-400 rounded-xl">
               Send message
             </button>
           </div>
