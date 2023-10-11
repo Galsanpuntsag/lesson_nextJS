@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineCalendar } from "react-icons/";
+import { BiSearchAlt } from "react-icons/bi";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -13,8 +13,8 @@ const Navbar = () => {
   const isActive = usePathname();
   console.log("bloggg", isActive);
   return (
-    <div className="mx-auto my-[36px]">
-      <div className="flex justify-between mx-[350px]">
+    <div className="my-[36px]">
+      <div className="flex justify-around">
         <div className="">
           <a href="/" className="flex w-[158px] h-[36px]">
             <img src="/Logo.png"></img>
@@ -35,19 +35,15 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <div className="">
+        <div className="flex p-1 border-[1px] rounded-[10px] border-black">
           <input
             type="text"
             placeholder="Search"
-            className="p-4 w-[134px] h-[20px] bg-[#F4F4F5] border-[1px] rounded-[10px] border-black"
+            className="p-4 w-[200px] h-[20px] "
           ></input>
-          <button>
-            {" "}
-            <img src=""></img>
+          <button className="bg-transparent p-1">
+            <BiSearchAlt />
           </button>
-        </div>
-        <div className="">
-          <img src="SearchIcon.png"></img>
         </div>
       </div>
     </div>

@@ -37,9 +37,11 @@ function Home() {
 
   return (
     <div>
-      <Header />
+      <div className="w-10/12 h-10/12 mx-auto">
+        <Header />
+      </div>
       <main className={`container mx-auto`}>
-        <section>
+        <section className="flex flex-col justify-center items-cemter">
           {isLoading && <Loader />}
           {error && (
             <h1 className="text-red-700 text-3xl text-center my-10">{error}</h1>
@@ -47,8 +49,8 @@ function Home() {
           {!isLoading && !error && (
             <>
               <h2>@All blogs</h2>
-              <div className="">
-                <div className="grid grid-cols-3 gap-3 my-10">
+              <div className="flex flex-col justify-center items-center gap-9">
+                <div className="grid grid-cols-3 gap-3 my-10  ">
                   {blogs.map((blog, i) => (
                     <Cards blog={blog} />
                   ))}

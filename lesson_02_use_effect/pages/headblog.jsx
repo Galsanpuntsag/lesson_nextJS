@@ -3,7 +3,7 @@ import { useState } from "react";
 import React from "react";
 import Headercards from "../Headercards";
 
-function headblog() {
+function Headblog() {
   const [headblogs, setHeadblogs] = useState([]);
 
   useEffect(() => {
@@ -16,6 +16,7 @@ function headblog() {
     setHeadblogs(data);
     console.log("headerDataBlogs", data);
   };
+
   return (
     <main className={`container mx-auto`}>
       <section className="mt-[80px]">
@@ -24,4 +25,4 @@ function headblog() {
     </main>
   );
 }
-export default headblog;
+export default Headblog;

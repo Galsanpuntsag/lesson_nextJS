@@ -5,7 +5,7 @@ import moment from "moment";
 const Cards = ({ blog }) => {
   return (
     <Link href={"/blog/" + blog.id}>
-      <div className="border flex flex-col p-3 w-[392px] h-[488px] rounded-[20px]">
+      <div className="border flex flex-col p-3 w-[392px] h-[488px] rounded-[20px] mx-3 mb-3">
         <img
           src={blog?.cover_image ? blog?.cover_image : "/ai.jpg"}
           className="w-[360px] h-[240px] rounded-[10px]"

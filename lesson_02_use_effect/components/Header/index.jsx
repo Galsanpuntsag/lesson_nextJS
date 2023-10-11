@@ -17,7 +17,7 @@ function Header() {
     console.log("headerDataBlogs", data);
   };
   return (
-    <main className={`container mx-auto`}>
+    <main className="flex flex-col">
       <section className="mt-[80px]">
         {headblogs && <Headercards headblogs={headblogs} />}
       </section>
