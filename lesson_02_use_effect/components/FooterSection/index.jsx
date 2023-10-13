@@ -12,7 +12,7 @@ const ParentFooter = () => {
         <FooterNavbar />
         <FooterIcon />
       </div>
-      <div className="mb-10">
+      <div className="flex flex-col p-5 md:flex sm:flex-row mb-10">
         <FooterLogo />
       </div>
     </div>

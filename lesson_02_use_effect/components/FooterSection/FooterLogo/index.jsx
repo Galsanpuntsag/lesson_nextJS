@@ -3,12 +3,15 @@ import React from "react";
 const FooterLogo = () => {
   return (
     <>
-      <div className="flex items-center justify-center mt-5">
-        <img src="Logo.png" className=""></img>
-        <div className="flex justify-between gap-4 ">
-          <h>Terms of Use</h>
-          <h>Privacy Policy</h>
-          <h>Cookie Pollicy</h>
+      <div className="flex justify-around mt-5">
+        <div className="mr-[300px] p-4">
+          <img src="Logo.png" className=""></img>
+        </div>
+
+        <div className="flex justify-around items-center underline gap-10">
+          <div>Terms of Use</div>
+          <div>Privacy Policy</div>
+          <div>Cookie Pollicy</div>
         </div>
       </div>
     </>
