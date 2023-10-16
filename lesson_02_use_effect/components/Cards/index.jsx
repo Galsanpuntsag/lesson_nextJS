@@ -5,18 +5,18 @@ import moment from "moment";
 const Cards = ({ blog }) => {
   return (
     <Link href={"/blog/" + blog.id}>
-      <div className="border flex flex-col p-3 w-[392px] h-[488px] rounded-[20px] bg-slate-200 ">
+      <div className="border flex flex-col p-3 lg:w-[392px] lg:h-[488px] rounded-[20px] bg-slate-200 ">
         <img
           src={
             blog?.user?.profile_image ? blog?.user?.profile_image : "/ai.jpg"
           }
-          className="w-[360px] h-[240px] rounded-[10px]"
+          className="lg:w-[360px] lg:h-[240px] rounded-[10px]"
         ></img>
-        <div className="flex flex-col my-4 p-2 w-[360px] h-[200px]">
+        <div className="flex flex-col my-4 p-2 lg:w-[360px] lg:h-[200px]">
           <span className="text-[#4B6BFB] border w-[97px] h-[29px] text-center rounded-[10px] bg-slate-100 mt-[8px]">
             {blog?.type_of}
           </span>
-          <span className="w-[344px] h-[100px] p-3 font-bold text-[22px] text-[#181A2A] mb-6 line-clamp-3">
+          <span className="lg:w-[344px] lg:h-[100px] p-3 font-bold text-[22px] text-[#181A2A] mb-6 line-clamp-3">
             {blog?.title}
           </span>
           <div className="flex items-center">

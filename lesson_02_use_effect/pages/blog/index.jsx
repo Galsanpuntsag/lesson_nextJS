@@ -41,9 +41,9 @@ const BlogPage = () => {
           <h1 className="text-blue-800 text-3xl text-center my-10">{error}</h1>
         )}
         {!isLoading && !error && (
-          <>
+          <div className="">
             <h2>@All blogs</h2>
-            <div className="grid grid-cols-3 gap-3 my-10">
+            <div className="flex flex-col p-5 lg:grid grid-cols-3 gap-3">
               {blogs.map((blog, i) => (
                 <Cards blog={blog} />
               ))}
@@ -56,7 +56,7 @@ const BlogPage = () => {
                 Loud More ...
               </button>
             </div>
-          </>
+          </div>
         )}
       </section>
     </main>

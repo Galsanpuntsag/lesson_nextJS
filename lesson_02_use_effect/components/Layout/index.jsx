@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import ParentFooter from "../FooterSection";
 const Layout = ({ children }) => {
   return (
-    <div className="">
+    <div className="bg-fixed">
       <Navbar />
       {children}
       <ParentFooter />

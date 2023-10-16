@@ -6,6 +6,10 @@ import Loader from "@/components/Loader";
 import { getData } from "@/utils/functions";
 
 function Home({ blogs }) {
+  const handleNext = () => {
+    console.log("daraagiin huudas ruu daragdlaa.");
+    setPages(pages + 3);
+  };
   return (
     <div className="flex flex-col justify-center items-center">
       <main className={`container mx-auto`}>

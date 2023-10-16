@@ -7,7 +7,7 @@ import { BsFacebook } from "react-icons/bs";
 const FooterIcon = () => {
   return (
     <>
-      <div className="flex gap-5 mt-2 ml-2">
+      <div className="flex justify-center gap-[40px] mt-4 ml-2">
         <BsFacebook />
         <FaSquareXTwitter />
         <AiFillInstagram />

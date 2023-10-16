@@ -7,7 +7,7 @@ import FooterLogo from "./FooterLogo";
 const ParentFooter = () => {
   return (
     <div className="bg-slate-200 flex flex-col justify-center items-center mt-10">
-      <div className="flex flex-col p-5 md:flex md:flex-row">
+      <div className="flex flex-col p-5">
         <FooterText />
         <FooterNavbar />
         <FooterIcon />
