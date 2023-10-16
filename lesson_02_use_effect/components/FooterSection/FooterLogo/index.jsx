@@ -3,7 +3,7 @@ import React from "react";
 const FooterLogo = () => {
   return (
     <>
-      <div className="flex justify-around mt-5">
+      <div className="flex flex-col justify-around mt-5">
         <div className="mr-[300px] p-4">
           <img src="Logo.png" className=""></img>
         </div>

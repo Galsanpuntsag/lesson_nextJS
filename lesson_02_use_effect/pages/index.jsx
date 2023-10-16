@@ -4,11 +4,11 @@ import CardsRespo from "@/components/CardsRespo";
 
 function Home() {
   return (
-    <div className="">
-      <div className="w-10/12 h-10/12 mx-auto sm:width-3/4">
+    <div className="flex flex-col justify-center mx-auto ml-[60px]">
+      <div className="">
         <ParentHeader />
       </div>
-      <main className="flex justify-center mx-auto">
+      <main className="">
         <CardsRespo />
       </main>
     </div>
