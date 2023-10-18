@@ -13,8 +13,8 @@ const Navbar = () => {
   const isActive = usePathname();
   console.log("bloggg", isActive);
   return (
-    <div className="bg-local bg-slate-300 w-full h-[80px] p-5 flex justify-center ">
-      <div className="flex flex-col justify-around">
+    <div className="bg-slate-300 w-full h-[80px] p-5 flex justify-center ">
+      <div className="flex flex-col justify-around lg:flex-row">
         <div className="">
           <a
             href="/"
@@ -39,7 +39,7 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <div className="flex lg:w-[100px] h-5 rounded-[3px] gap-2 mr-2 pl-4 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ">
+          <div className="flex lg:w-[100px] h-5 rounded-[3px] gap-2 mr-2 pl-4">
             {/* <input
               type="text"
               placeholder="Search"

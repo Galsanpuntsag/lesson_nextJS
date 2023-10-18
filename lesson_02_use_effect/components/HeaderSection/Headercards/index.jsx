@@ -4,11 +4,11 @@ import RecentCard from "../RecentCard";
 const Headercards = ({ headblogs }) => {
   return (
     <div className="">
-      <div className="bg-slate-200 w-full rounded-[20px] ">
+      <div className="bg-slate-200 w-full rounded-[20px]">
         <h10 className="pl-5 text-[15px] hover:text-orange-400 ">
           @Reacent blog posts
         </h10>
-        <div className="flex flex-col mt-8">
+        <div className="flex flex-col lg:flex-row mt-8">
           <RecentCard
             headblog={headblogs[0]}
             type="flex-col"

@@ -3,7 +3,7 @@ import React from "react";
 const contact = () => {
   return (
     <div className="">
-      <div className="flex flex-col items-center justify-center p-5 ">
+      <div className="flex flex-col items-center justify-center p-5 gap-5 ">
         <div className="lg:w-[624px] lg:h-[163px]">
           <h className="text-[40px] font-semibold">Contact Us</h>
           <div className="max-w-xl">

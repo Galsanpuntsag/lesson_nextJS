@@ -17,8 +17,8 @@ function Header() {
     console.log("headerDataBlogs", data);
   };
   return (
-    <main className="flex flex-col">
-      <section className="mt-[80px]">
+    <main className="flex flex-col sm:flex-row">
+      <section className="mt-[80px] mx-5">
         {headblogs && <Headercards headblogs={headblogs} />}
       </section>
     </main>

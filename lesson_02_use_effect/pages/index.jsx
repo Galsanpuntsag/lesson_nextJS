@@ -8,7 +8,7 @@ function Home() {
       <div className="">
         <ParentHeader />
       </div>
-      <main className="">
+      <main className="mx-5">
         <CardsRespo />
       </main>
     </div>
