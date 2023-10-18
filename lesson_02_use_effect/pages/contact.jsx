@@ -4,7 +4,7 @@ const contact = () => {
   return (
     <div className="">
       <div className="flex flex-col items-center justify-center p-5 gap-5 ">
-        <div className="lg:w-[624px] lg:h-[163px]">
+        <div className="lg:w-[624px] lg:h-[163px] mt-20">
           <h className="text-[40px] font-semibold">Contact Us</h>
           <div className="max-w-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint

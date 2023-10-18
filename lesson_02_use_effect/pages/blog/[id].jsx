@@ -22,8 +22,8 @@ const BlogDetail = () => {
   }, []);
 
   return (
-    <div className="container bg-slate-100 p-12 rounded-[20px] mx-auto mt-24 max-w-4xl">
-      <div>
+    <div className="bg-slate-100 rounded-[20px] p-5 mx-10">
+      <div className="mt-[100px] my-10">
         {blogDetailData ? (
           <>
             <div>

@@ -3,8 +3,8 @@ import RecentCard from "../RecentCard";
 
 const Headercards = ({ headblogs }) => {
   return (
-    <div className="">
-      <div className="bg-slate-200 w-full rounded-[20px]">
+    <div className="flex flex-col justify-center mx-auto items-center">
+      <div className="bg-slate-200 rounded-[20px]">
         <h10 className="pl-5 text-[15px] hover:text-orange-400 ">
           @Reacent blog posts
         </h10>
@@ -25,7 +25,7 @@ const Headercards = ({ headblogs }) => {
           </div>
         </div>
       </div>
-      <div className="w-12/12 h-1/2 mt-[30px] bg-slate-200 rounded-[20px] mb-[80px] pb-[20px]">
+      <div className="w-full h-1/2 mt-[30px] bg-slate-200 rounded-[20px] mb-[80px] pb-[20px]">
         <RecentCard
           className="h-[210px] pb-[20px]"
           headblog={headblogs[3]}

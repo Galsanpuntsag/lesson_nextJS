@@ -13,7 +13,7 @@ const Navbar = () => {
   const isActive = usePathname();
   console.log("bloggg", isActive);
   return (
-    <div className="bg-slate-300 w-full h-[80px] p-5 flex justify-center ">
+    <div className="bg-slate-300 w-full rounded-[10px] h-[80px] p-5 flex justify-center fixed lg:sticky ">
       <div className="flex flex-col justify-around lg:flex-row">
         <div className="">
           <a

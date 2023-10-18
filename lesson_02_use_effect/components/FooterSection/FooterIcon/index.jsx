@@ -7,11 +7,11 @@ import { BsFacebook } from "react-icons/bs";
 const FooterIcon = () => {
   return (
     <>
-      <div className="flex justify-center gap-[40px] mt-4 ml-2">
-        <BsFacebook />
-        <FaSquareXTwitter />
-        <AiFillInstagram />
-        <AiOutlineLinkedin />
+      <div className="flex justify-center gap-[20px] mt-5 ml-2 lg:gap-[40px] lg:items-center">
+        <BsFacebook className=" hover:bg-green-400 rounded-full w-[40px] h-[40px]" />
+        <FaSquareXTwitter className=" hover:bg-green-400 rounded-full w-[40px] h-[40px]" />
+        <AiFillInstagram className=" hover:bg-green-400 rounded-full w-[40px] h-[40px]" />
+        <AiOutlineLinkedin className=" hover:bg-green-400 rounded-full w-[40px] h-[40px]" />
       </div>
     </>
   );

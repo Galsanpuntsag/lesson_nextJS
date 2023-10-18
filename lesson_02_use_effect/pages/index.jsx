@@ -8,7 +8,7 @@ function Home() {
       <div className="">
         <ParentHeader />
       </div>
-      <main className="mx-5">
+      <main className="mx-[18px] sm:mx-[50px]">
         <CardsRespo />
       </main>
     </div>

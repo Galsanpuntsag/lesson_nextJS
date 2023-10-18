@@ -10,7 +10,7 @@ const RecentCard = ({ headblog, type }) => {
           src={headblog?.social_image ? headblog?.social_image : "/ai.jpg"}
           className={`rounded-[10px] ${
             type == "flex-col"
-              ? "w-11/12 h-[200px] mt-[20px]"
+              ? "w-10/12 h-[200px] mt-[20px]"
               : "w-[60%] h-[200px]"
           }`}
         ></img>
@@ -23,7 +23,9 @@ const RecentCard = ({ headblog, type }) => {
             {moment(headblog?.created_at).format("LL")}
           </div>
           <div className="line-clamp-2 "> {headblog?.title}</div>
-          <div className="my-6 line-clamp-2">{headblog?.description}</div>
+          <div className="my-6 line-clamp-2 max-w-[800px]">
+            {headblog?.description}
+          </div>
         </div>
       </div>
     </Link>

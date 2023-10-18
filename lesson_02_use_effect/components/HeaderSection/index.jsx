@@ -3,7 +3,7 @@ import Header from "./Header";
 
 const ParentHeader = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex ">
       <Header />
     </div>
   );
