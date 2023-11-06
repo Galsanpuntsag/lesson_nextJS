@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { getData } from "@/utils/functions";
 import Loader from "../Loader";
 
+
 const CardsRespo = () => {
   const [blogs, setBlogs] = useState([]);
   console.log("BLOGS", blogs);
@@ -11,6 +12,9 @@ const CardsRespo = () => {
   const [error, setError] = useState("");
   const [pages, setPages] = useState(6);
 
+  
+
+  
   const getBlogs = async () => {
     try {
       const data = await getData(

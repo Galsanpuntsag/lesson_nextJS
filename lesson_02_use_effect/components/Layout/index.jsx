@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../Navbar";
 import ParentFooter from "../FooterSection";
-const Layout = ({ children }) => {
+const Layout = ({ children, setSearchTitle }) => {
   return (
     <div className="bg-fixed">
-      <Navbar />
+      <Navbar setSearchTitle={setSearchTitle} />
       {children}
       <ParentFooter />
     </div>

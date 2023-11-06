@@ -3,12 +3,21 @@ import Cards from "@/components/Cards";
 import { useState, useEffect } from "react";
 import { getData } from "@/utils/functions";
 import Loader from "@/components/Loader";
+import Layout from "@/components/Layout";
 
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [pages, setPages] = useState(6);
+
+  const [blogList, setBlogList] = useState(blogs);
+  // const [searchTitle, setSearchTitle ] = useState("hoho");
+
+  const searchBlog = (searchTitle) => {
+    const findBlog = blogs.filter((blog) => blog.title.includes(searchTitle));
+    setBlogList(findBlog);
+  }
 
   const getBlogs = async () => {
     try {
@@ -34,6 +43,7 @@ const BlogPage = () => {
   }, [pages]);
 
   return (
+    <Layout setSearchTitle={searchBlog}>
     <main className={`container mx-auto`}>
       <section>
         {isLoading && <Loader />}
@@ -41,7 +51,7 @@ const BlogPage = () => {
           <h1 className="text-blue-800 text-3xl text-center my-10">{error}</h1>
         )}
         {!isLoading && !error && (
-          <div className="">
+          <div>
             <h2>@All blogs</h2>
             <div className="flex flex-col p-5 lg:grid grid-cols-3 gap-3">
               {blogs.map((blog, i) => (
@@ -60,6 +70,7 @@ const BlogPage = () => {
         )}
       </section>
     </main>
+    </Layout>
   );
 };
 
